@@ -4,7 +4,7 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 
 const config = {
-  birthdate: 'nov 25 2024',
+  birthdate: 'nov 25 2023',
   name: 'Trần Đức Anh (chó vàng)'
 };
 
@@ -551,7 +551,21 @@ function createParticle(e) {
 }
 
 document.getElementById('special-button').addEventListener('click', function() {
-  window.location.href = 'https://github.com/hoa2995/test-html/blob/main/qr.png?raw=true';
+  // Tạo và hiển thị thông báo lời chúc
+  const message = "Chúc mừng sinh nhật tuổi 19! Tuổi đẹp nhất của thanh xuân, hãy sống thật trọn vẹn, thật rực rỡ và luôn lạc quan nhé. Mong mọi ước mơ của bạn đều thành hiện thực, gặp thật nhiều niềm vui và thành công trong cuộc sống. Happy 19!";
+  
+  Swal.fire({
+    title: 'Happy Birthday! 🎉',
+    text: message,
+    icon: 'success',
+    confirmButtonText: 'Cảm ơn!',
+    allowOutsideClick: false
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Chuyển hướng sau khi người dùng nhấn nút xác nhận
+      window.location.href = 'https://github.com/hoa2995/test-html/blob/main/qr.png?raw=true';
+    }
+  });
 });
 
 document.getElementById('special-button').addEventListener('mousemove', createParticle);
