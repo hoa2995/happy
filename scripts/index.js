@@ -4,7 +4,7 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 
 const config = {
-  birthdate: 'nov 25 2023',
+  birthdate: 'nov 25 2024',
   name: 'Trần Đức Anh (chó vàng)'
 };
 
